@@ -3,3 +3,5 @@
 ## AutoGPT
 ## autogen
 ## LlamaIndex
+## crewai
+## langgraph

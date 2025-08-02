@@ -2,3 +2,4 @@
 ## LangChain
 ## AutoGPT
 ## autogen
+## LlamaIndex

@@ -1,7 +1,7 @@
 # Let's make Agentic AI
 ## LangChain
 ## AutoGPT
-## autogen
+## AugoGen
 ## LlamaIndex
 ## crewai
 ## LangGraph

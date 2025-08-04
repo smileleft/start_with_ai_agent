@@ -3,5 +3,5 @@
 ## AutoGPT
 ## AugoGen
 ## LlamaIndex
-## crewai
+## CrewAI
 ## LangGraph

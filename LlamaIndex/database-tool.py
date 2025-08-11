@@ -16,13 +16,14 @@ db_spec = DatabaseToolSpec(
 )
 
 db_tools = db_spec.to_tool_list()
-for tool in tools:
+for tool in db_tools:
     print(tool.metadata.name)
     print(tool.metadata.description)
     print(tool.metadata.fn_schema)
 
 agent = FunctionAgent(
-    tools=db_tools.to_tool_list(),
+    #tools=db_tools.to_tool_list(), #-> this is bug!
+    tools=db_tools,
     llm=OpenAI(model="gpt-4.1"),
 )
 

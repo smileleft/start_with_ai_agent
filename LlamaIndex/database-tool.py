@@ -7,7 +7,7 @@ from llama_index.tools.database.base import DatabaseToolSpec
 
 load_dotenv()
 db_spec = DatabaseToolSpec(
-    scheme=os.env["DB_SCHEMA"]
+    scheme=os.env["DB_SCHEMA"],
     host=os.env["DB_HOST"],
     port=os.env["DB_PORT"],  # Database Port
     user=os.env["DB_USER"],  # Database User

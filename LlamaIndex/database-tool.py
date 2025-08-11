@@ -15,7 +15,7 @@ db_spec = DatabaseToolSpec(
     dbname=os.getenv('DB_NAME'),  # Database Name
 )
 
-tools = db_spec.to_tool_list()
+db_tools = db_spec.to_tool_list()
 for tool in tools:
     print(tool.metadata.name)
     print(tool.metadata.description)

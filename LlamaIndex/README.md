@@ -8,7 +8,7 @@
 
 ## Code
 
-### make Function Tool
+### make Function Tools
 
 ```
 import os

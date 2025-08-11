@@ -4,8 +4,8 @@
 
 ```
 !pip install llama-index langchain_community "httpx==0.28.1"
-%pip install llama-index-agent-openai
-%pip install llama-index-llms-openai
+pip install llama-index-agent-openai
+pip install llama-index-llms-openai
 ```
 
 ## Code

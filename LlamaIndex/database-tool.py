@@ -1,16 +1,18 @@
 import os
+import dotenv
 from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.openai import OpenAI
 # Import and initialize our tool spec
 from llama_index.tools.database.base import DatabaseToolSpec
 
+load_dotenv()
 db_spec = DatabaseToolSpec(
-    scheme="postgresql",  # Database Scheme
-    host="localhost",  # Database Host
-    port="5432",  # Database Port
-    user="postgres",  # Database User
-    password="x",  # Database Password
-    dbname="your_db",  # Database Name
+    scheme=os.env["DB_SCHEMA"]
+    host=os.env["DB_HOST"],
+    port=os.env["DB_PORT"],  # Database Port
+    user=os.env["DB_USER"],  # Database User
+    password=os.env["DB_PASSWORD"],  # Database Password
+    dbname=os.env["DB_NAME"],  # Database Name
 )
 
 tools = db_spec.to_tool_list()

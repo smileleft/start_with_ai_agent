@@ -1,4 +1,4 @@
-import os
+import os, asyncio
 import dotenv
 from llama_index.core.agent.workflow import FunctionAgent
 from llama_index.llms.openai import OpenAI
@@ -30,8 +30,13 @@ agent = FunctionAgent(
 from llama_index.core.workflow import Context
 ctx = Context(agent)
 
-print(await agent.run("What tables does this database contain", ctx=ctx))
-print(await agent.run("Can you describe the messages table", ctx=ctx))
-print(await agent.run("Fetch the most recent message and display the body", ctx=ctx))
+async def main():
+    print(await agent.run("What tables does this database contain", ctx=ctx))
+    print(await agent.run("Can you describe the messages table", ctx=ctx))
+    print(await agent.run("Fetch the most recent message and display the body", ctx=ctx))
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
 
 
